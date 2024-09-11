@@ -1,0 +1,43 @@
+﻿@page
+@model Razor3.Pages.PeriodicTable.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Element</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Element.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Element.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Element.Nr)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Element.Nr)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Element.Sign)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Element.Sign)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Element.weight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Element.weight)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Element.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
